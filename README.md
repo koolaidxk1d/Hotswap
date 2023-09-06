@@ -14,3 +14,8 @@
 1) Input IP and Port to connect and grab the user data.
 2) Make desired changes.
 3) Click Save User to save changes to a given user.
+
+
+---
+
+thanks [@DizzRL](https://twitter.com/dizzrl)
