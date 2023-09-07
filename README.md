@@ -28,6 +28,7 @@ Unblock-File PS5-Profile-Modder/ConnectForm.resx
 Unblock-File PS5-Profile-Modder/Editor.resx
 rm licenses.licx
 ```
+- The other dependencies *should* sort themselves out automatically. 
 
 - Build (Ctrl-Shift-B)
 
