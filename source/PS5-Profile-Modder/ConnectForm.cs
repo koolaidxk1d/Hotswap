@@ -1,6 +1,5 @@
 ﻿using DevExpress.LookAndFeel;
 using DevExpress.Skins;
-using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraEditors;
 using FluentFTP;
 using ImageMagick;
