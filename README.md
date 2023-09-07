@@ -26,10 +26,9 @@ dotnet nuget add source https://nuget.devexpress.com/api -n DXFeed -u DevExpress
 Install-Package DevExpress.Win
 Unblock-File PS5-Profile-Modder/ConnectForm.resx
 Unblock-File PS5-Profile-Modder/Editor.resx
-rm PS5-Profile-Modder/Properties/licenses.licx
 ```
 - The other dependencies *should* sort themselves out automatically. 
-
+- Click on Editor.cs in the solution explorer. This will trigger a license file to be created in the Properties folder. Once this happens, you can **delete the license.licx** file (if you don't delete it, you will have popups when you run the program.)
 - Build (Ctrl-Shift-B)
 
 ---
