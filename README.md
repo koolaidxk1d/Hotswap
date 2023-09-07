@@ -26,7 +26,7 @@ dotnet nuget add source https://nuget.devexpress.com/api -n DXFeed -u DevExpress
 Install-Package DevExpress.Win
 Unblock-File PS5-Profile-Modder/ConnectForm.resx
 Unblock-File PS5-Profile-Modder/Editor.resx
-rm licenses.licx
+rm PS5-Profile-Modder/Properties/licenses.licx
 ```
 - The other dependencies *should* sort themselves out automatically. 
 
