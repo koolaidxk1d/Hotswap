@@ -8,6 +8,7 @@
 - Automatically handles .png/.dds file resizing and formatting
 - Built-in crop tool and photo editor
 - Pick image or take a picture with your webcam
+- Pull and save existing avatar
 - Automatic Light and Dark Mode themes
 
 ## How to Use
