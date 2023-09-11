@@ -18,7 +18,7 @@
 
 ## Build Instructions
 
-- Install [Visual Studio 2022](https://visualstudio.microsoft.com/downloads) and install [.NET Framework 4.8 Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-developer-pack-offline-installer).
+- Install [Visual Studio 2022](https://visualstudio.microsoft.com/downloads) (check the ".NET Desktop Development" box in the installer) and install [.NET Framework 4.8 Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-developer-pack-offline-installer).
 - Signup and get a free auth key at [Nuget.Devexpress.com](https://nuget.devexpress.com/)
 - Open VS and open the solution. Go into View > Other Windows > Package Manager Console. Enter the following:
 
