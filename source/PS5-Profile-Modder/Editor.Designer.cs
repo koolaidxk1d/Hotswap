@@ -31,6 +31,7 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.btnTrash = new DevExpress.XtraEditors.SimpleButton();
             this.dropUsers = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnGrabber = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dropUsers.Properties)).BeginInit();
             this.SuspendLayout();
@@ -83,11 +84,27 @@
             this.dropUsers.TabIndex = 1;
             this.dropUsers.SelectedIndexChanged += new System.EventHandler(this.dropUsers_SelectedIndexChanged);
             // 
+            // btnGrabber
+            // 
+            this.btnGrabber.Appearance.ForeColor = System.Drawing.Color.OliveDrab;
+            this.btnGrabber.Appearance.Options.UseForeColor = true;
+            this.btnGrabber.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.btnGrabber.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnGrabber.Location = new System.Drawing.Point(96, 118);
+            this.btnGrabber.Name = "btnGrabber";
+            this.btnGrabber.Size = new System.Drawing.Size(26, 28);
+            this.btnGrabber.TabIndex = 12;
+            this.btnGrabber.ToolTip = "Download this avatar\'s files to your PC";
+            this.btnGrabber.Click += new System.EventHandler(this.btnGrabber_Click);
+            // 
             // Editor
             // 
+            this.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 266);
+            this.Controls.Add(this.btnGrabber);
             this.Controls.Add(this.btnTrash);
             this.Controls.Add(this.panelAvatar);
             this.Controls.Add(this.btnEdit);
@@ -115,5 +132,6 @@
         private System.Windows.Forms.Panel panelAvatar;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.SimpleButton btnTrash;
+        private DevExpress.XtraEditors.SimpleButton btnGrabber;
     }
 }

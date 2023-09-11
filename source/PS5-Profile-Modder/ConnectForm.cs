@@ -123,8 +123,12 @@ namespace PS5_Profile_Modder {
                 Array.Clear(AvatarBuffer, 0, AvatarBuffer.Length);
                 MagickImage Avatar = null;
 
-                //download name
-                client.DownloadBytes(out NameBuffer, string.Format("/user/home/{0}/username.dat", item.Name));
+                //download name if possible
+                try {
+                    client.DownloadBytes(out NameBuffer, string.Format("/user/home/{0}/username.dat", item.Name));
+                } catch {
+                    NameBuffer = Encoding.ASCII.GetBytes(item.Name);
+                }
                 //download avatar if possible
                 try {
                     client.DownloadBytes(out AvatarBuffer, string.Format("/system_data/priv/cache/profile/{0}/avatar.png", ("0x" + item.Name.ToUpper())));

@@ -142,6 +142,11 @@ namespace PS5_Profile_Modder {
 
         private void dropUsers_SelectedIndexChanged(object sender, EventArgs e) {
             this.panelAvatar.Refresh();
+            if (Users.UsersDict[dropUsers.SelectedItem.ToString()].Avatar == null) {
+                btnGrabber.Enabled = false;
+            } else {
+                btnGrabber.Enabled = true;
+            }
 
             if (Users.UsersDict[dropUsers.SelectedItem.ToString()].Changed == true) {
                 btnSave.Enabled = true;
@@ -176,5 +181,29 @@ namespace PS5_Profile_Modder {
             }
         }
 
+        private void btnGrabber_Click(object sender, EventArgs e) {
+            var dir = dropUsers.SelectedItem.ToString().Replace("\0", string.Empty);
+            try {
+                foreach (char c in System.IO.Path.GetInvalidFileNameChars()) {
+                    dir = dir.Replace(c, '_');
+                }
+                Directory.CreateDirectory(dir);
+                client.DownloadFile(dir + "/avatar.png", string.Format("/system_data/priv/cache/profile/{0}/avatar.png", "0x" + Users.UsersDict[dropUsers.SelectedItem.ToString()].ID.ToUpper()));
+                client.DownloadFile(dir + "/avatar440.dds", string.Format("/system_data/priv/cache/profile/{0}/avatar440.dds", "0x" + Users.UsersDict[dropUsers.SelectedItem.ToString()].ID.ToUpper()));
+                client.DownloadFile(dir + "/avatar260.dds", string.Format("/system_data/priv/cache/profile/{0}/avatar260.dds", "0x" + Users.UsersDict[dropUsers.SelectedItem.ToString()].ID.ToUpper()));
+                client.DownloadFile(dir + "/avatar128.dds", string.Format("/system_data/priv/cache/profile/{0}/avatar128.dds", "0x" + Users.UsersDict[dropUsers.SelectedItem.ToString()].ID.ToUpper()));
+                client.DownloadFile(dir + "/avatar64.dds", string.Format("/system_data/priv/cache/profile/{0}/avatar64.dds", "0x" + Users.UsersDict[dropUsers.SelectedItem.ToString()].ID.ToUpper()));
+            }
+            catch {
+                XtraMessageBox.Show("Unknown issue while downloading images.",
+                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+            XtraMessageBox.Show(string.Format("The user's images have been downloaded and saved inside the \"{0}\" folder.", dir),
+            "Avatar Downloaded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return;
+
+        }
     }
 }
