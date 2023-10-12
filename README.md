@@ -34,4 +34,4 @@ Unblock-File PS5-Profile-Modder/Editor.resx
 
 ---
 
-thanks [@DizzRL](https://twitter.com/dizzrl)
+thanks [@DizzMods](https://twitter.com/dizzmods)
